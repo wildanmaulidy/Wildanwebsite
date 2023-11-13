@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubungi Kami</title>
+  <style>
+    body {
+      background-color: #f2f2f2; /* Light gray background */
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #333; /* Dark background for the header */
+      color: #fff; /* White text color for the header */
+      padding: 20px;
+    }
+    h1 {
+      color: #ff6600; /* Orange text color for the heading */
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff; /* White text color for navigation links */
+    }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      color: #3366cc; /* Blue text color for subheadings */
+    }
+    p {
+      color: #666; /* Dark gray text color for paragraphs */
+    }
+    footer {
+      background-color: #333; /* Dark background for the footer */
+      color: #fff; /* White text color for the footer */
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hubungi Kami</h1>
+    <nav>
+      <ul>
+        <li><a href="\">Beranda</a></li>
+        <li><a href="tentang">Tentang Kami</a></li>
+        <li><a href="kontak">Hubungi Kami</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Informasi Kontak</h2>
+    <p>Silakan hubungi kami jika Anda memiliki pertanyaan atau membutuhkan bantuan. Kami siap membantu Anda!</p>
+    <address>
+      <p>Alamat: Jalan pakong No.128</p>
+      <p>Telepon:081-750-300-77</p>
+      <p>Email: <a href="sandoreswildan@gmail.com">sandoreswildan@gmail.com</a></p>
+    </address>
+  </section>
+
+  <section>
+    <h2>Formulir Kontak</h2>
+    <p>Silakan isi formulir di bawah ini untuk mengirim pesan kepada kami.</p>
+    <form action="submit_form.php" method="post">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Pesan:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Hubungi Kami. Hak cipta dilindungi undang-undang.</p>
+  </footer>
+</body>
+</html>
