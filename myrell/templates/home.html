@@ -1,62 +1,393 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beranda</title>
-  <style>
-    body {
-      background-color: #f2f2f2;
-      font-family: Arial, sans-serif;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-    }
-    h1 {
-      color: #ff6600; /* Orange text color */
-    }
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav li {
-      display: inline;
-      margin-right: 20px;
-    }
-    nav a {
-      text-decoration: none;
-      color: #fff;
-    }
-    section {
-      padding: 20px;
-    }
-    h2 {
-      color: #3366cc; /* Blue text color */
-    }
-    p {
-      color: #666;
-    }
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9e3e3;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fe620d;
+            color: #0a0a0a;
+            padding: 1em;
+            text-align: center;
+            animation: headerAnimation 1s ease-in-out;
+        }
+
+        @keyframes headerAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 1em;
+            animation: navAnimation 1s ease-in-out;
+        }
+
+        @keyframes navAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 1em;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav li:hover {
+            transform: scale(1.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0b0b0b;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+        }
+
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Gaya tambahan khusus untuk halaman produk */
+        .produk {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .produk-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            width: 300px;
+        }
+        .produk-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .produk-item-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .produk-item-buttons button {
+            width: 30%;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .beli-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .pesan-button {
+            background-color: #2196F3;
+            color: white;
+        }
+        .keranjang-button {
+            background-color: #FF9800;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>Selamat Datang di toko sperpart motor kami</h1>
-    <nav>
-      <ul>
-        <li><a href="\">Beranda</a></li>
-        <li><a href="tentang">Tentang Kami</a></li>
-        <li><a href="kontak">Hubungi Kami</a></li>
-      </ul>
-    </nav>
-  </header>
+
+    <header>
+        <h1>SparBikeStore</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="checkout">Checkout</a></li>
+                <li><a href="keranjang">keranjang</a></li>
+                <li><a href="pesan">pesan</a></li>
+                <li><a href="login">login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>SILAHKAN PILIH BARANG YANG ANDA BUTUHKAN</h2>
+        <div class="produk">
+            <div class="produk-item">
+                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/8/30/f66ff103-5ceb-4f79-bf68-e17855ae8749.jpg" alt="Produk 1">
+                <h3>Produk 1</h3>
+                <h3>Velk king speed</h3>
+                <p>Harga: RP.100k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+            <div class="produk-item">
+                <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//90/MTA-4234904/yss_yss_top_prime_sok_shockbreaker_motor_for_tiger_-32_cm-_320_mm-_full05_qq9groh.jpg" alt="Produk 2">
+                <h3>Produk 2</h3>
+                <h3>Shock breaker belakang yss</h3>
+                <p>Harga: RP.150k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://lzd-img-global.slatic.net/g/p/ba77d71064006b59235a489a0959d43d.jpg_720x720q80.jpg" alt="Produk 3">
+                <h3>Produk 3</h3>
+                <h3>Karbu pwk 32 kawahara</h3>
+                <p>Harga: RP.900k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//112/MTA-93978616/oem_oem_full01.jpg" alt="Produk 4">
+                <h3>Produk 4</h3>
+                <h3>Knalpot AHM malaysia original</h3>
+                <p>Harga: RP.800k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://lzd-img-global.slatic.net/g/ff/kf/S99228594824548d3b4c6c22f94a59a95P.jpg_720x720q80.jpg" alt="Produk 5">
+                <h3>Produk 5</h3>
+                <h3>Master rem brembo </h3>
+                <p>Harga: RP.300k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/11/7/3b9c4796-8d6f-4a9d-a396-84d14a95f190.jpg" alt="Produk 6">
+                <h3>Produk 6</h3>
+                <h3>Kaliper brembo depan</h3>
+                <p>Harga: RP.500k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/11/3/8d308212-d8e1-453c-b1c9-2eade6323b49.jpg" alt="Produk 7">
+                <h3>Produk 7</h3>
+                <h3>Shock depan kyb</h3>
+                <p>Harga: RP.950k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://img.ws.mms.shopee.co.id/7e10ff9bb455a1df3bbbccea03ca9ba6" alt="Produk 8">
+                <h3>Produk 8</h3>
+                <h3>Pirelli diablo rosso corsa ll</h3>
+                <p>Harga: RP.950k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//90/MTA-3306194/lightech_lightech-tabung-minyak-rem-original---kecil_full14.jpg" alt="Produk 9">
+                <h3>Produk 9</h3>
+                <h3>Lighteck</h3>
+                <p>Harga: RP.800k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/98/MTA-141339049/no-brand_no-brand_full04.jpg" alt="Produk 10">
+                <h3>Produk 10</h3>
+                <h3>Baut king nut</h3>
+                <p>Harga: RP.850k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://down-id.img.susercontent.com/file/8e28c6a8a905b2b94e39d11ebe5954c1" alt="Produk 11">
+                <h3>Produk 11</h3>
+                <h3>Oli deltalube</h3>
+                <p>Harga: RP.250k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://images.tokopedia.net/img/cache/700/hDjmkQ/2023/3/17/9c217124-797e-496f-8f0f-602a48b195fc.jpg" alt="Produk 12">
+                <h3>Produk 12</h3>
+                <h3>Spido digital force1</h3>
+                <p>Harga: RP.500K</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/12/16/cd67052d-873e-4c45-a0c8-7880b44f6c8e.jpg" alt="Produk 13">
+                <h3>Produk 13</h3>
+                <H3>Piston moto 1</h3>
+                <p>Harga: RP.250k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-23030-gx1vpo11reovac" alt="Produk 14">
+                <h3>Produk 14</h3>
+                <h3>Biled aes turbo</h3>
+                <p>Harga: RP.800k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://down-id.img.susercontent.com/file/3c9e98a2c91c38ff086a8dac893d9446" alt="Produk 15">
+                <h3>Produk 15</h3>
+                <h3>Disc piringan Galfer 260mm</h3>
+                <p>Harga: RP.900k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSuf2bQSZmfy66hIW6FY4LrfZeJFBnRyQsTabqDrEMQHYuG8ZYO8fJDM0Xae8bk-n-yZBNJlD5a5XkkhnuRA7ejkp8NkA2bDFaHjhXu9w8&usqp=CAE" alt="Produk 16">
+                <h3>Produk 16</h3>
+                <h3>Gear belakang RIDE IT</h3>
+                <p>Harga: RP.950k</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQrGvJLsX9nG0XO9t7SnjdvAZHI59d3FFf-aFJYKquJClabQb_vwszrhv0EWsPbWQRGh_fFZBkTXzaaFEvJ01w3BJAvXK7w2KkF6L7Mrr-c&usqp=CAE" alt="Produk 17">
+                <h3>Produk 17</h3>
+                <h3>Rantai TK RACING</H3>
+                <p>Harga: RP.550K</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+            <div class="produk-item">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQmaVQwVyopFmwYmWn60LCkcNcDvHLT52GR_6ETfzORiOr9I4E_H-7d0CAbYDnowRnZ8KQ0Rgep-ux4A-IYNwGj49zHwikEr2Rm-5WY_wzzI3GaKbilJIw29g&usqp=CAE" alt="Produk 18">
+                <h3>Produk 18</h3>
+                <h3>Stabilizer motor MOTO 1</h3>
+                <p>Harga: RP.1.500jt</p>
+                <div class="produk-item-buttons">
+                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function beliProduk() {
+            alert("Produk berhasil ditambahkan ke keranjang belanja!");
+        }
+
+        function pesanProduk() {
+            alert("Produk berhasil dipesan!");
+        }
+
+        function tambahKeKeranjang() {
+            alert("Produk berhasil ditambahkan ke keranjang!");
+        }
+    </script>
+
+
+
 </body>
+
 </html>

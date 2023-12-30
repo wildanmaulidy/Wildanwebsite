@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9e3e3;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fe620d;
+            color: #0a0a0a;
+            padding: 1em;
+            text-align: center;
+            animation: headerAnimation 1s ease-in-out;
+        }
+
+        @keyframes headerAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 1em;
+            animation: navAnimation 1s ease-in-out;
+        }
+
+        @keyframes navAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 1em;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav li:hover {
+            transform: scale(1.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0b0b0b;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+        }
+
+        #keranjang {
+            width: 80%;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #fe620d;
+            color: #0b0b0b;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Centered and Animated Header */
+        #keranjang h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>KERANJANG SAYA</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="checkout">Checkout</a></li>
+                <li><a href="keranjang">keranjang</a></li>
+                <li><a href="pesan">pesan</a></li>
+                <li><a href="login">login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="keranjang">
+        <h2>Keranjang Belanja</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produk</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <td>Produk 1</td>
+                    <td>Rp 100.000</td>
+                    <td>2</td>
+                    <td>Rp 200.000</td>
+                </tr>
+                <tr>
+                    <td>Produk 2</td>
+                    <td>Rp 150.000</td>
+                    <td>1</td>
+                    <td>Rp 150.000</td>
+                </tr>
+                <tr>
+                    <td>Produk 5</td>
+                    <td>Rp 300.000</td>
+                    <td>7</td>
+                    <td>Rp 2.100.000</td>
+                </tr>
+                <tr>
+                    <td>Produk 6</td>
+                    <td>Rp 500.000</td>
+                    <td>5</td>
+                    <td>Rp 2.500.000</td>
+                </tr>
+                <tr>
+                    <td>Produk 18</td>
+                    <td>Rp 1.500.000</td>
+                    <td>3</td>
+                    <td>Rp 4.500.000</td>
+                </tr>
+                <tr>
+                    <td>Produk 10</td>
+                    <td>Rp 850.000</td>
+                    <td>1</td>
+                    <td>Rp 850.000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="checkout" class="checkout-btn">Checkout</a>
+    </div>
+
+    <script>
+        function checkout() {
+            alert('Proses checkout...');
+        }
+    </script>
+
+</body>
+
+</html>

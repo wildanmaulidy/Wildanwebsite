@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9e3e3;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fe620d;
+    color: #0a0a0a;
+    padding: 1em;
+    text-align: center;
+    animation: headerAnimation 1s ease-in-out;
+}
+
+@keyframes headerAnimation {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    animation: navAnimation 1s ease-in-out;
+}
+
+@keyframes navAnimation {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav li:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #0b0b0b;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff0000;
+}
+section {
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .checkout-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #fe620d;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #fffcfc;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>SILAHKAN ISI KOLOM DIBAWAH SESUAI PESANAN ANDA</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="checkout">checkout</a></li>
+                <li><a href="keranjang">keranjang</a></li>
+                <li><a href="pesan">pesan</a></li>
+                <li><a href="login">login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-content">
+        <section class="animate__animated animate__fadeInUp">
+            <h2>Checkout</h2>
+            <form class="checkout-form">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="alamat">Alamat Pengiriman:</label>
+                <textarea id="alamat" name="alamat" rows="4" required></textarea>
+
+                <label for="metode-pembayaran">Metode Pembayaran:</label>
+                <select id="metode-pembayaran" name="metode-pembayaran" required>
+                    <option value="transfer-bank">Transfer Bank</option>
+                    <option value="kartu-kredit">Kartu Kredit</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+
+                <button type="submit">Pesan Sekarang</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Toko Online</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Google Sign-In -->
+    <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9e3e3;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fe620d;
+            color: #000000;
+            padding: 1em;
+            text-align: center;
+            animation: headerAnimation 1s ease-in-out;
+        }
+
+        @keyframes headerAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 1em;
+            animation: navAnimation 1s ease-in-out;
+        }
+
+        @keyframes navAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 1em;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav li:hover {
+            transform: scale(1.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+        }
+
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #ffffff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgb(254, 254, 254); /* Box shadow for the form */
+            background-color: rgb(111, 106, 106); /* Semi-transparent white background */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s; /* Transition for input field hover effect */
+        }
+
+        input:hover {
+            border-color: #ffffff; /* Input field border color on hover */
+        }
+
+        button {
+            background-color: #fe620d;
+            color: #000000;
+            padding: 15px 30px; /* Increased padding */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            background: linear-gradient(to right, #fe620d, #fe620d); /* Gradient background for the button */
+        }
+
+        button:hover {
+            background-color: #fe620d;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .google-btn,
+        .facebook-btn {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .google-btn:hover,
+        .facebook-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .google-icon,
+        .facebook-icon {
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>SELAMAT DATANG DI MENU LOGIN</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="checkout">Checkout</a></li>
+                <li><a href="keranjang">keranjang</a></li>
+                <li><a href="pesan">pesan</a></li>
+                <li><a href="login">login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section class="animate__animated animate__fadeInUp">
+            <h2>Login</h2>
+            <form method="post" action="login">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>
